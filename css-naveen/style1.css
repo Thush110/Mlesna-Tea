@@ -94,7 +94,7 @@ body {
     background-image: url(../imgs-naveen/bg12.png);
     background-size: 1400px 1200px;
     background-repeat: 2;
-    background-color: #aedabd;
+    background-color: #420001;
 
 }
 
@@ -188,7 +188,7 @@ nav.navbar {
 }
 
 nav.navbar a, nav.navbar ul li a {
-    color: #97eea3 !important;
+    color: #420001 !important;
 }
 
 nav.navbar ul li {
