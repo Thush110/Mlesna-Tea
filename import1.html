@@ -5,6 +5,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Import</title>
       <script src="js-naveen/import.js"></script>
+      <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
       <link rel="stylesheet" href="css-naveen/bootstrap.min.css">
       <link rel="stylesheet" href="css-naveen/style1.css">
       <link rel="stylesheet" href="css-naveen/fontawesome.min.css">
@@ -29,10 +30,11 @@
                         <a class="nav-link" href="Explore Tea.html">Explore Tea</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="import1.html">Products</a>
+                        <a class="nav-link" href="PRODUCT.html">Products</a>
                      </li>
                      <li class="nav-item">
                         <a class="nav-link" href="Reviews.html">Tea Reviews</a>
+                      
                      </li>
                      <li class="nav-item">
                         <a class="nav-link" href="RECIPEn.html">Recipies</a>
@@ -60,7 +62,7 @@
 
          <div class="form-control success">
             <lable>Company Name</lable>
-            <input type="text" placeholder="Tea-Tan Shop" id="cname">
+            <input type="text" placeholder="Tea-Tan Shop" id="cname" required>
             <i class="fas fa-check-circle"></i>
             <i class="fas fa-exclamation-circle"></i>
            <small>Error message</small>
@@ -68,7 +70,7 @@
 
          <div class="form-control">
             <lable>Your Name</lable>
-            <input type="text" placeholder="M.S Jagath" id="name">
+            <input type="text" placeholder="M.S Jagath" id="name" required>
             <i class="fas fa-check-circle"></i> 
             <i class="fas fa-exclamation-circle"></i>
             <small>Error message</small>
@@ -76,7 +78,7 @@
 
          <div class="form-control">
             <lable>Address</lable>
-            <input type="text" placeholder="No12,Gallface RD,Colombo 04" id="address">
+            <input type="text" placeholder="No12,Gallface RD,Colombo 04" id="address" required>
             <i class="fas fa-check-circle"></i>
             <i class="fas fa-exclamation-circle"></i>
             <small>Error message</small>
@@ -84,7 +86,7 @@
 
          <div class="form-control">
             <lable>Number</lable>
-            <input type="number" placeholder="011xxxxxxx" id="number">
+            <input type="number" placeholder="011xxxxxxx" id="number" required>
             <i class="fas fa-check-circle"></i>
             <i class="fas fa-exclamation-circle"></i>
             <small>Error message</small>
@@ -92,7 +94,7 @@
 
          <div class="form-control error">
             <lable>Email</lable>
-            <input type="email" placeholder="jhone@gmail.com" id="email">
+            <input type="email" placeholder="jhone@gmail.com" id="email" required>
             <i class="fas fa-check-circle"></i>
             <i class="fas fa-exclamation-circle"></i>
             <small>Error message</small>
@@ -105,7 +107,7 @@
                                  
                                  <form action="#">
                                    <p>
-                                     <input type="checkbox" id="test1" />
+                                     <input type="checkbox" id="test1"  />
                                      <label for="test1">Dust No.1</label>
                                    </p>
                                    <p>
@@ -139,32 +141,30 @@
                                   <br>
                                   <h3>Green Tea</h3>
                                   <p>
-                                    <input type="checkbox" id="test9" />
+                                    <input type="checkbox" id="test9"  />
                                     <label for="test9"> Fannings</label>
                                   </p>
                                   <p>
                                     <input type="checkbox" id="test10" />
                                     <label for="test10">Sencha</label>
                                   </p>
-                                  <p>
-                                    <input type="checkbox" id="test11" />
-                                    <label for="test11">Fannings</label>
-                                  </p>
+                                 
                                     <p>
                                       <input type="checkbox" id="test12" disabled="disabled" />
                                       <label for="test12">Green Curls</label>
                                   </p>
                                   <p>
-                                    <input type="checkbox" id="test13" />
+                                    <input type="checkbox" id="test13" required />
                                     <label for="test13">Gun Powder</label>
                                   </p>
                                  
 
-         <button>Submit</button>
+                                  <button id="button-a">Submit</button>
 
        </form>
 
      </div>
+     
       
       
      <footer>
@@ -182,9 +182,11 @@
                     <ul>
                        <li><a href="index.html">Home</a></li>
                        <li><a href="Explore Tea.html">Explore Tea</a></li>
-                       <li><a href="import1.html">Products</a></li>
+                       <li><a href="PRODUCT.html">Products</a></li>
                        <li><a href="Reviews.html">Tea Reviews</a></li>
+                       <li><a href="Brewing and Tasting.html">Brewing and Tasting</a></li>
                        <li><a href="RECIPEn.html">Recipies</a></li>
+                       <li><a href="import1.html">Import</a></li>
                     </ul>
                  </div>
               </div>
@@ -251,5 +253,25 @@
    <script type="text/javascript">
      $(".sidebar").stick_in_parent();
    </script>
+   <script>
+    $('#button-a').click(function(){
+      swal({
+        title:"Order Place",
+        text: "Are You Sure?",
+        buttons: {
+               No: true,
+               confirm: "Yes"
+                 }
+ }).then( val => {
+        if(val)  {
+                swal({
+                     title: "Thanks!",
+                     text: "Your Order on the way",
+                     icon: "success"
+                     });
+                 }
+ });
+    })
+  </script>
   </body>
 </html>

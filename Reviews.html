@@ -28,7 +28,7 @@
                         <a class="nav-link" href="Explore Tea.html">Explore Tea</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="import1.html">Products</a>
+                        <a class="nav-link" href="PRODUCT.html">Products</a>
                      </li>
                      <li class="nav-item">
                         <a class="nav-link" href="Reviews.html">Tea Reviews</a>
@@ -111,12 +111,12 @@
               </select>        
                   <div class="form-group">
                     <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="text" placeholder="Enter email">
+                    <input type="email" required class="form-control" id="text" placeholder="Enter email">
                         <small  class="form-text text-muted">We'll never share your email with anyone else.</small>
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Review</label>
-                    <textarea type="text" class="form-control" id="message" placeholder="write your own reviews" rows="3"></textarea>
+                    <textarea type="text" required class="form-control" id="message" placeholder="write your own reviews" rows="3"></textarea>
                   </div>
                   <hr>  
                   <div class="rating-row">
@@ -127,7 +127,17 @@
                     <i class="fa fa-star fa-2x" data-index="3"></i>
                     <i class="fa fa-star fa-2x" data-index="4"></i>
                   </div>
-                  <button  id="submit" class="btn btn-success submit">Submit</button>
+                  <button  id="submit" class="btn btn-success submit" onclick="clicked(event)">Submit</button>
+				  
+				  <script>
+						function clicked(e)
+						{
+							if(!confirm('Are you sure about this review?')) {
+								e.preventDefault();
+							}
+						}
+					</script>
+				  
                 </form>
             </div>
           </div>
@@ -140,26 +150,26 @@
         <ul class="list-group list-group-flush">
             <ul class="list-group">
               <li class="list-group-item"><i class="fa fa-hand-o-right" aria-hidden="true"></i>
-                <a href="#">Ask the Experts</a>
-              </li>
-              <li class="list-group-item" ><i class="fa fa-hand-o-right" aria-hidden="true"></i>
-                <a href="#">Learn About Tea</a>
-              </li>
-              <li class="list-group-item"><i class="fa fa-hand-o-right" aria-hidden="true"></i>
-                    <a href="#">Story of Ceylon Tea</a>s
-              </li>
-              <li class="list-group-item"><i class="fa fa-hand-o-right" aria-hidden="true"></i>
-                  <a href="#">Brewing and Tasting</a>
-              </li>
-              <li class="list-group-item"><i class="fa fa-hand-o-right" aria-hidden="true"></i>
-                  <a href="#">Glossary</a>
-              </li>
-              <li class="list-group-item"><i class="fa fa-hand-o-right" aria-hidden="true"></i>
-                    <a href="#">Tips</a>
-              </li>
-              <li class="list-group-item"><i class="fa fa-hand-o-right" aria-hidden="true"></i>
-                  <a href="#">About Us</a>
-              </li>
+                <a href="AskE.html">Ask the Experts</a>
+             </li>
+             <li class="list-group-item"><i class="fa fa-hand-o-right" aria-hidden="true"></i>
+                <a href="About-Us1.html">Learn About Tea</a>
+             </li>
+             <li class="list-group-item"><i class="fa fa-hand-o-right" aria-hidden="true"></i>
+                <a href="history_of_tea.html">Story of Ceylon Tea</a>
+             </li>
+             <li class="list-group-item"><i class="fa fa-hand-o-right" aria-hidden="true"></i>
+                <a href="Brewing and Tasting.html">Brewing and Tasting</a>
+             </li>
+             <li class="list-group-item"><i class="fa fa-hand-o-right" aria-hidden="true"></i>
+                <a href="glossary.html">Glossary</a>
+             </li>
+             <li class="list-group-item"><i class="fa fa-hand-o-right" aria-hidden="true"></i>
+                <a href="tips.html">Tips</a>
+             </li>
+             <li class="list-group-item"><i class="fa fa-hand-o-right" aria-hidden="true"></i>
+                <a href="About-Us1.html">About Us</a>
+             </li>
             </ul>
           </ul>
           
@@ -182,9 +192,10 @@
                      <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="Explore Tea.html">Explore Tea</a></li>
-                        <li><a href="import1.html">Products</a></li>
+                        <li><a href="PRODUCT.html">Products</a></li>
                         <li><a href="Reviews.html">Tea Reviews</a></li>
                         <li><a href="RECIPEn.html">Recipies</a></li>
+                        <li><a href="import1.html">Import</a></li>
                      </ul>
                   </div>
                </div>
